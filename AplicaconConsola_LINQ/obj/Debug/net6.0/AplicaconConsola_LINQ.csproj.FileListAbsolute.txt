@@ -1,0 +1,15 @@
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\bin\Debug\net6.0\AplicaconConsola_LINQ.exe
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\bin\Debug\net6.0\AplicaconConsola_LINQ.deps.json
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\bin\Debug\net6.0\AplicaconConsola_LINQ.runtimeconfig.json
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\bin\Debug\net6.0\AplicaconConsola_LINQ.dll
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\bin\Debug\net6.0\AplicaconConsola_LINQ.pdb
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.csproj.AssemblyReference.cache
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.GeneratedMSBuildEditorConfig.editorconfig
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.AssemblyInfoInputs.cache
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.AssemblyInfo.cs
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.csproj.CoreCompileInputs.cache
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.dll
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\refint\AplicaconConsola_LINQ.dll
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.pdb
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\AplicaconConsola_LINQ.genruntimeconfig.cache
+D:\PERSONA\Aprendizaje\NET_C#\Manejo_LINQ\ManejoDatosLINQ_C-\AplicaconConsola_LINQ\obj\Debug\net6.0\ref\AplicaconConsola_LINQ.dll
