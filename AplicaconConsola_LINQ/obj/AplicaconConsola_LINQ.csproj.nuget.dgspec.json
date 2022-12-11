@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj": {}
+    "D:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj": {}
   },
   "projects": {
-    "d:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj": {
+    "D:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj",
+        "projectUniqueName": "D:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj",
         "projectName": "AplicaconConsola_LINQ",
-        "projectPath": "d:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj",
+        "projectPath": "D:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\AplicaconConsola_LINQ.csproj",
         "packagesPath": "C:\\Users\\lenov\\.nuget\\packages\\",
-        "outputPath": "d:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\obj\\",
+        "outputPath": "D:\\PERSONA\\Aprendizaje\\NET_C#\\Manejo_LINQ\\ManejoDatosLINQ_C-\\AplicaconConsola_LINQ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenov\\AppData\\Roaming\\NuGet\\NuGet.Config",
