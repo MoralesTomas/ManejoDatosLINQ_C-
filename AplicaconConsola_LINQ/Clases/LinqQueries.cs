@@ -23,6 +23,21 @@ public class LinqQueries
     {
         return librosCollection;
     }
+
+    public IEnumerable<Book> librosDespues2000(){
+
+        //con metodos de extension
+        // return librosCollection.Where(libro => libro.PublishedDate.Year > 2000);
+
+
+        //con query expression
+        return from l in librosCollection where l.PublishedDate.Year > 2000 select l;
+    }
+
+    public IEnumerable<Book> dobleCondicion( int paginasMinimas, string palabraContenidaTitulo ){
+
+        return librosCollection.Where(libro => libro.PageCount > paginasMinimas && libro.Title.Contains(palabraContenidaTitulo));
+    }
 }
 
 
