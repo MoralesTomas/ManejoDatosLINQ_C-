@@ -38,6 +38,18 @@ public class LinqQueries
 
         return librosCollection.Where(libro => libro.PageCount > paginasMinimas && libro.Title.Contains(palabraContenidaTitulo));
     }
+
+    public bool verificacionStatus(){
+        
+        return librosCollection.All(libro => libro.Status != string.Empty);
+    
+    }
+
+    public bool verificarPublicacionPorAnio(int anio){
+
+        return librosCollection.Any(libro => libro.PublishedDate.Year == anio);
+
+    }
 }
 
 

@@ -7,6 +7,11 @@ Console.WriteLine("===================Libros publicados despues del 2000========
 ImprimirValores(queries.librosDespues2000());
 Console.WriteLine("===================Libros que cumplen con la doble condicion=======================");
 ImprimirValores(queries.dobleCondicion(250,"in Action"));
+Console.WriteLine("===================Todos los libros contienen Status?=======================");
+Console.WriteLine(queries.verificacionStatus());
+Console.WriteLine("===================Verificacion de libro publicado por anio=======================");
+int anio = 2005;
+Console.WriteLine(queries.verificarPublicacionPorAnio(anio));
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
