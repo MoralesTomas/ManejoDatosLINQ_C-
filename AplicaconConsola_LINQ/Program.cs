@@ -3,15 +3,32 @@
 
 Console.WriteLine("===================Coleccion de libros completa=======================");
 ImprimirValores(queries.TodaLaColeccion());
+
 Console.WriteLine("===================Libros publicados despues del 2000=======================");
 ImprimirValores(queries.librosDespues2000());
+
 Console.WriteLine("===================Libros que cumplen con la doble condicion=======================");
 ImprimirValores(queries.dobleCondicion(250,"in Action"));
+
 Console.WriteLine("===================Todos los libros contienen Status?=======================");
 Console.WriteLine(queries.verificacionStatus());
+
 Console.WriteLine("===================Verificacion de libro publicado por anio=======================");
 int anio = 2005;
 Console.WriteLine(queries.verificarPublicacionPorAnio(anio));
+
+Console.WriteLine("===================Libros por categoria=======================");
+string categoriaBuscada = "Python";
+Console.WriteLine($"Libros que contengan la categoria {categoriaBuscada}");
+ImprimirValores(queries.verificacionCategoria(categoriaBuscada));
+
+Console.WriteLine("===================Libros por categoria Ascendente=======================");
+categoriaBuscada = "Java";
+Console.WriteLine($"Libros que contengan la categoria {categoriaBuscada} ordenados por su titulo de manera ascendente");
+ImprimirValores(queries.retornarOrdenado_filtrandoCategoria(categoriaBuscada));
+
+Console.WriteLine("===================Libros por minimo de paginas de manera descendente=======================");
+ImprimirValores(queries.paginasMinimas_Descendente( 450 ));
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {

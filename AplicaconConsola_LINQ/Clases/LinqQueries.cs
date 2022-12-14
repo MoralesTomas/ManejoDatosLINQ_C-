@@ -1,3 +1,4 @@
+using System.Linq;
 public class LinqQueries
 {
     private List<Book> librosCollection = new List<Book>();
@@ -49,6 +50,24 @@ public class LinqQueries
 
         return librosCollection.Any(libro => libro.PublishedDate.Year == anio);
 
+    }
+
+    public IEnumerable<Book> verificacionCategoria(string categoria_buscada){
+        
+        return librosCollection.Where(libro => libro.Categories.Contains(categoria_buscada));
+
+    } 
+
+    public IEnumerable<Book> retornarOrdenado_filtrandoCategoria( string categoria ){
+        
+        List<Book> tmp = verificacionCategoria(categoria).ToList();
+        
+        return tmp.OrderBy(libro => libro.Title);
+    }
+
+    public IEnumerable<Book> paginasMinimas_Descendente( int pagMin ){
+        
+        return librosCollection.Where( libro => libro.PageCount > pagMin ).OrderByDescending( libro => libro.PageCount );
     }
 }
 
