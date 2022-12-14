@@ -69,6 +69,36 @@ public class LinqQueries
         
         return librosCollection.Where( libro => libro.PageCount > pagMin ).OrderByDescending( libro => libro.PageCount );
     }
+
+    public IEnumerable<Book> seleccionTopPublicacionPorCategoria( string categoria, int top){
+        
+        return librosCollection.Where( libro => libro.Categories.Contains(categoria)).OrderByDescending(libro => libro.PublishedDate).Take(top);
+    
+    }
+
+    public IEnumerable<Book> seleccionTercerYCuartoLibroMayorAPaginas( int minPag ){
+
+        return librosCollection.Where(libro => libro.PageCount > minPag ).Take(4).Skip(2);
+
+    }
+
+    public void EjTakeWhile(){
+        List<int> listado = new List<int>{1,2,3,4,5,6,7,8,9,10};
+
+        List<int> result = listado.TakeWhile( numero => numero < 6).ToList();
+
+        result.ForEach( resul => Console.WriteLine(resul));
+        
+    }
+
+    public void EjSkipWhile(){
+        List<int> listado = new List<int>{1,2,3,4,5,6,7,8,9,10};
+
+        List<int> result = listado.SkipWhile( numero => numero < 6).ToList();
+
+        result.ForEach( resul => Console.WriteLine(resul));
+        
+    }
 }
 
 

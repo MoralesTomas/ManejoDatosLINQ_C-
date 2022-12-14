@@ -30,6 +30,22 @@ ImprimirValores(queries.retornarOrdenado_filtrandoCategoria(categoriaBuscada));
 Console.WriteLine("===================Libros por minimo de paginas de manera descendente=======================");
 ImprimirValores(queries.paginasMinimas_Descendente( 450 ));
 
+Console.WriteLine("===================Top libros ordenados descendente segun categoria=======================");
+categoriaBuscada = "Java";
+int cantidad_Mostrar = 3;
+Console.WriteLine($"Top {cantidad_Mostrar} libros que contengan la categoria {categoriaBuscada} ordenados por fecha de publicacion ");
+ImprimirValores(queries.seleccionTopPublicacionPorCategoria(categoriaBuscada, cantidad_Mostrar));
+
+Console.WriteLine("===================Tecer y cuarto libro de la seccion de libros con mas de n cantidad de paginas=======================");
+int paginasMinimas = 400;
+ImprimirValores(queries.seleccionTercerYCuartoLibroMayorAPaginas(paginasMinimas));
+
+Console.WriteLine("===================Ejemplo TakeWhile=======================");
+queries.EjTakeWhile();
+
+Console.WriteLine("===================Ejemplo SkipWhile=======================");
+queries.EjSkipWhile();
+
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
     //imprimir titulos
