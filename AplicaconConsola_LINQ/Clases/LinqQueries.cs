@@ -109,6 +109,18 @@ public class LinqQueries
 
         return librosCollection.Take(3).Select( libro => new Book(){ Title = libro.Title, PageCount = libro.PageCount});
     }
+
+    public int countLibrosPorNPaginas(int min, int max){
+        
+        return librosCollection.Count(libro => libro.PageCount >= min && max >= libro.PageCount);
+
+    }
+
+    public long countLibrosPorNPaginasLong(int min, int max){
+        
+        return librosCollection.LongCount(libro => libro.PageCount >= min && max >= libro.PageCount);
+
+    }
 }
 
 

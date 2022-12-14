@@ -46,6 +46,12 @@ queries.EjTakeWhile();
 Console.WriteLine("===================Ejemplo SkipWhile=======================");
 queries.EjSkipWhile();
 
+Console.WriteLine("===================Cantidad de libros segun intervalo de cantidad de paginas=======================");
+int min = 200;
+int max = 500;
+Console.WriteLine($"La cantidad de libros que contienen entre {min} y {max} paginas es de : {queries.countLibrosPorNPaginas(min,max)}");
+
+
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
     //imprimir titulos
