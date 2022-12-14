@@ -99,6 +99,16 @@ public class LinqQueries
         result.ForEach( resul => Console.WriteLine(resul));
         
     }
+
+    public IEnumerable<Book> TresPrimerosLibrosUsando_Select(){
+
+        //se puede hacer una clase que guarde solo los elementos que solicitamos pero en este
+        //caso vamos a crear nuevas instancias para retornar las cuales van a llevar solo los datos que necesitemos
+        //retornar
+        //Retornamos solo el titulo y la cantidad de paginas.
+
+        return librosCollection.Take(3).Select( libro => new Book(){ Title = libro.Title, PageCount = libro.PageCount});
+    }
 }
 
 
