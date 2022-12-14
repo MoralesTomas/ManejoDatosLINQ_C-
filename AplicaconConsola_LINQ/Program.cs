@@ -52,6 +52,17 @@ int max = 500;
 Console.WriteLine($"La cantidad de libros que contienen entre {min} y {max} paginas es de : {queries.countLibrosPorNPaginas(min,max)}");
 
 
+Console.WriteLine("===================Fecha de publicacion mas antigua=======================");
+Console.WriteLine(queries.menorFechaPublicacion().ToShortDateString());
+
+
+Console.WriteLine("===================Mayor cantidad de paginas de un libro=======================");
+Console.WriteLine(queries.mayorCantidadPaginasLibro());
+
+
+
+
+
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
     //imprimir titulos
