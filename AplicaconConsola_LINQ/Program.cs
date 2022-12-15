@@ -59,7 +59,13 @@ Console.WriteLine(queries.menorFechaPublicacion().ToShortDateString());
 Console.WriteLine("===================Mayor cantidad de paginas de un libro=======================");
 Console.WriteLine(queries.mayorCantidadPaginasLibro());
 
+Console.WriteLine("===================Libro con menor cantidad de paginas==========");
+var result = queries.libroConMenorCantidadPaginasMayorQueCero();
+Console.WriteLine($"{result.Title} con un numero de paginas de {result.PageCount}");
 
+Console.WriteLine("===================Libro fecha de publicacion mas reciente==========");
+result = queries.ultimoLibroPublicado();
+Console.WriteLine($"{result.Title} //Fecha de publicacion ====>// {result.PublishedDate.ToShortDateString()}");
 
 
 

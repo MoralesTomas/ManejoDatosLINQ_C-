@@ -133,6 +133,18 @@ public class LinqQueries
         return librosCollection.Max( libro => libro.PageCount);
 
     }
+
+    public Book libroConMenorCantidadPaginasMayorQueCero(){
+
+        return librosCollection.Where( libro => libro.PageCount >0 ).MinBy( libro => libro.PageCount );
+
+    }
+
+    public Book ultimoLibroPublicado(){
+
+        return librosCollection.MaxBy( libro => libro.PublishedDate );
+
+    }
 }
 
 
