@@ -67,7 +67,14 @@ Console.WriteLine("===================Libro fecha de publicacion mas reciente===
 result = queries.ultimoLibroPublicado();
 Console.WriteLine($"{result.Title} //Fecha de publicacion ====>// {result.PublishedDate.ToShortDateString()}");
 
+Console.WriteLine("===================Suma de paginas de los libros que contengan entre 0 y 500 paginas==========");
+var resultado = queries.SumaPaginasLibrosConPaginasEntre_0y500();
+Console.WriteLine($"La suma total es de: {resultado}");
 
+
+Console.WriteLine("===================Listado de libros que fueron publicados despues del 2015==========");
+var resultadoString = queries.TitulosDeLibrosDespuesDel2015Concatenados();
+Console.WriteLine($"{resultadoString}");
 
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
