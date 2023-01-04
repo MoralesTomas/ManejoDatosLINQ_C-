@@ -76,6 +76,14 @@ Console.WriteLine("===================Listado de libros que fueron publicados de
 var resultadoString = queries.TitulosDeLibrosDespuesDel2015Concatenados();
 Console.WriteLine($"{resultadoString}");
 
+Console.WriteLine("===========Se muestra el promedio de caracteres contenidos en el titulo de los libros==========");
+var resultadoDouble = queries.PromedioCaracteresTitulo();
+Console.WriteLine($"El promedio de los caracteres en los titulos es: {resultadoDouble}");
+
+Console.WriteLine("===========Libros publicados apartir del 2000 agrupados por anios==========");
+var resultadoAgrupado = queries.LibrosDespuesdel2000AgrupadosporAnio();
+ImprimirGrupo( resultadoAgrupado );
+
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
     //imprimir titulos
@@ -88,4 +96,18 @@ void ImprimirValores(IEnumerable<Book> listadelibros)
     }
 
     Console.WriteLine($"Libros totales {listadelibros.Count()}");
+}
+
+void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
+{
+    foreach(var grupo in ListadeLibros)
+    {
+        Console.WriteLine("");
+        Console.WriteLine($"Anio evaluado: { grupo.Key } --------------------------------");
+        Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+        foreach(var item in grupo)
+        {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
+        }
+    }
 }

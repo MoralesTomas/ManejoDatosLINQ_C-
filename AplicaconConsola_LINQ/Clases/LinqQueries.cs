@@ -164,6 +164,17 @@ public class LinqQueries
                     return TitulosLibros;
                 });
     }
+
+    public double PromedioCaracteresTitulo()
+    {
+        return librosCollection.Average(p=> p.Title.Length);
+    }
+
+    //para agrupar por anio
+    public IEnumerable<IGrouping<int, Book>> LibrosDespuesdel2000AgrupadosporAnio()
+    {
+        return librosCollection.Where(p=> p.PublishedDate.Year >= 2000).GroupBy(p=> p.PublishedDate.Year);
+    }
 }
 
 
