@@ -84,6 +84,15 @@ Console.WriteLine("===========Libros publicados apartir del 2000 agrupados por a
 var resultadoAgrupado = queries.LibrosDespuesdel2000AgrupadosporAnio();
 ImprimirGrupo( resultadoAgrupado );
 
+//comenzando a usar Lookup
+var diccionarioBusqueda = queries.DiccionariosDeLibrosPorLetra();
+var letra = 'B';
+Console.WriteLine($"\n===========Libros que comienzan con la letra {letra}==========");
+ImprimirDiccionario(diccionarioBusqueda, letra);
+
+
+
+
 void ImprimirValores(IEnumerable<Book> listadelibros)
 {
     //imprimir titulos
@@ -109,5 +118,14 @@ void ImprimirGrupo(IEnumerable<IGrouping<int,Book>> ListadeLibros)
         {
             Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
         }
+    }
+}
+
+void ImprimirDiccionario(ILookup<char, Book> ListadeLibros, char letra)
+{   
+    Console.WriteLine("{0,-60} {1, 15} {2, 15}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+    foreach(var item in ListadeLibros[letra])
+    {
+            Console.WriteLine("{0,-60} {1, 15} {2, 15}",item.Title,item.PageCount,item.PublishedDate.Date.ToShortDateString()); 
     }
 }
