@@ -10,8 +10,6 @@ public class LinqQueries
         using(StreamReader reader = new StreamReader("Libros/Libros.json"))
         {
             
-            //vamos a guardar el contenido dentro de un string utilizando el metodo ReadToEnd 
-            //para que lea el archivo de principio a fin
 
             string json = reader.ReadToEnd();
 
@@ -102,10 +100,6 @@ public class LinqQueries
 
     public IEnumerable<Book> TresPrimerosLibrosUsando_Select(){
 
-        //se puede hacer una clase que guarde solo los elementos que solicitamos pero en este
-        //caso vamos a crear nuevas instancias para retornar las cuales van a llevar solo los datos que necesitemos
-        //retornar
-        //Retornamos solo el titulo y la cantidad de paginas.
 
         return librosCollection.Take(3).Select( libro => new Book(){ Title = libro.Title, PageCount = libro.PageCount});
     }
@@ -170,13 +164,11 @@ public class LinqQueries
         return librosCollection.Average(p=> p.Title.Length);
     }
 
-    //para agrupar por anio
+
     public IEnumerable<IGrouping<int, Book>> LibrosDespuesdel2000AgrupadosporAnio()
     {
         return librosCollection.Where(p=> p.PublishedDate.Year >= 2000).GroupBy(p=> p.PublishedDate.Year);
     }
-
-    //para realizar agrupamientos mediante diccionarios
 
     public ILookup<char, Book> DiccionariosDeLibrosPorLetra()
     {
@@ -184,7 +176,6 @@ public class LinqQueries
     }
 
 
-    //join
 
     public IEnumerable<Book> LibrosDespuesdel2005conmasde500Pags()
     {
@@ -195,18 +186,3 @@ public class LinqQueries
         return LibrosDepuesdel2005.Join(LibrosConMasde500pag, p=> p.Title, x=> x.Title, (p, x) => p);
     }
 }
-
-
-/*
-Donde:
-
-    >la opcion .Text.Json.JsonSerializer lo que hace es convertir el texto en un json que podemos manejar
-
-    >luego lo convertimos en un tipo de dato definido por nosotros dependiendo lo que estemos reciviendo el json. En este caso queremos
-    un listado de libros (es lo que viene en el json) "List<libro>" y le indicamos con que string debe trabajar en este caso es con el string
-    llamado "json".
-
-    >agregamos una propiedad mas para que las propiedades de cada objeto json se enlacen con las propiedades de la clase que definimos es decir 
-    que ignore si vienen mayusculas o minusculas en las propiedades y que se enlace en sus distintas propiedades.
-
-*/
