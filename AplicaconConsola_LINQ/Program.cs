@@ -90,6 +90,8 @@ var letra = 'B';
 Console.WriteLine($"\n===========Libros que comienzan con la letra {letra}==========");
 ImprimirDiccionario(diccionarioBusqueda, letra);
 
+Console.WriteLine($"\n===========Libros filtrados por JOIN paginas > 500 y publicacion luego del 2005==========");
+ImprimirValores( queries.LibrosDespuesdel2005conmasde500Pags() );
 
 
 
